@@ -104,3 +104,63 @@ The EDF headers were already de-identified by the authors with MNE-BIDS ("X X X"
 TSV and JSON files contain participant codes, age in years, sex, seizure-onset zone, minutes from sleep onset and
 sleep-stage vectors. They contain no names, dates of birth, record numbers or imaging. A byte-level review was run
 before this deposit.
+
+---------------------------------------------------------------------------
+## Additional description (lane L metadata enrichment, 2026-10-06; sources: Falach et al. 2024, Sci Data 11:1354, doi:10.1038/s41597-024-04187-y, sections named below)
+
+### Cohort and acquisition (Methods: Participants, EEG Recordings)
+- 25 patients with drug-resistant epilepsy, implanted with depth iEEG electrodes for clinical evaluation of seizure
+  foci; electrode locations were based solely on clinical criteria. 9 patients from Tel Aviv Sourasky Medical
+  Center (TASMC, recruited 2017-2023) and 16 from UCLA (2007-2012, 2017-2021), who volunteered for an overnight
+  sleep research recording session.
+- Implant type: depth electrodes (SEEG-type), platinum contacts along the shaft. All 980 channels in the shared
+  files are depth-electrode channels (typed SEEG), including the authors' bipolar derivations.
+- Amplifier: Blackrock system; sampled at 2 kHz, referenced to a central scalp electrode. The shared EDFs are
+  1000 Hz (see "Recording facts" above).
+- Channel naming: hemisphere letter (R/L) + 1-3 region letters (e.g. A amygdala, EC entorhinal cortex, AH
+  anterior hippocampus; full list in derivatives/channels.tsv) + contact number from 1 (most mesial) increasing
+  laterally. Channel selection was based on availability, without regard to IED presence.
+- In 15 patients, sleep scoring also used scalp polysomnography (C3, C4, Pz, EOG, chin EMG). These scalp
+  channels are not part of the shared EDF files.
+
+### Sleep staging (Methods: Sleep staging)
+Manual scoring per AASM guidelines with the Visbrain sleep module (data resampled to 250 Hz, 30-s epochs, with
+EOG and optionally EMG). Where only iEEG was available, a validated automatic algorithm detected NREM from
+neocortical slow waves and spindles, and all other epochs were marked "wake/REM". The per-subject sleep-scoring
+vector (30-s resolution, 15 patients) and time from sleep onset (22 patients) are in participants.tsv.
+
+### Annotation procedure (Methods: Manual annotations)
+Two neurologists annotated the data (D.E.: full montage of all intracranial channels for 10 UCLA patients; L.G.:
+the other 15 patients, montage of the three most medial MTL channels). Annotation used mainly a scalp-reference
+montage; for patients with only MTL signals an additional bipolar montage was included. Criteria: IFCN criteria
+for interictal epileptiform discharges with intracerebral considerations (Frauscher et al.). Annotators were
+blinded to the clinical profile and used Nicolet Reader (Natus) or Persyst. Each tag has a timestamp and the
+brain location of the abnormal activity; tags were then converted into channel lists
+(derivatives/*_events_interpretation.tsv). Inter-rater agreement on 6 patients: Cohen's kappa 0.63 +/- 0.23
+(1-s resolution).
+
+### Files
+- sub-XX/ieeg/*_ieeg.edf: EDF, 1000 Hz, microvolts, referential (and some bipolar) depth channels.
+- *_ieeg.json: site, power line frequency, recording duration, channel counts, reference.
+- *_channels.tsv: channel type/units/cutoffs plus side (L/R) and soz_region (1 = in the seizure-onset zone).
+- *_events.tsv: one row per annotated IED (onset s, duration 0, trial_type = neurologist's free-text label,
+  sample = onset x 1000).
+- *_electrodes.tsv / *_coordsystem.json: MNI152Lin coordinates (mm) for 18 participants; n/a for 7 (see above).
+- derivatives/channels.tsv: channel-abbreviation definitions; derivatives/*_events_interpretation.tsv: per-IED
+  channel lists (time_in_sec, annotation, chans).
+- sourcedata/ieeg_ieds_bids_final.zip: the authors' original archive.
+
+### Preprocessing already applied by the source
+Resampling from the 2 kHz acquisition to the shared 1000 Hz (method not stated by the authors); bipolar
+derivations added for some patients. The 0.1-500 Hz band-pass and 50/60 Hz notch described in the paper's
+"Technical Validation" were applied for the detection model, not to the shared files (SoftwareFilters "n/a" in the
+source sidecars).
+
+### How to load
+    from mne_bids import BIDSPath, read_raw_bids
+    bp = BIDSPath(root="<dataset root>", subject="01", task="sleep", datatype="ieeg", suffix="ieeg", extension=".edf")
+    raw = read_raw_bids(bp)   # IED annotations from events.tsv appear in raw.annotations
+The authors' detection code: https://github.com/NirLab-TAU/iEEG_ied_detection
+
+### Funding and acknowledgements
+See dataset_description.json (Funding, Acknowledgements), copied from the paper's Acknowledgements.
