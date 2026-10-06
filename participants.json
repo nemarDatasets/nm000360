@@ -1,34 +1,37 @@
 {
-    "participant_id": {
-        "Description": "Unique participant identifier"
-    },
-    "age": {
-        "Description": "Age of the participant at time of testing",
-        "Units": "years"
-    },
-    "sex": {
-        "Description": "Biological sex of the participant",
-        "Levels": {
-            "F": "female",
-            "M": "male"
-        }
-    },
-    "descriptive_SOZ": {
-        "Description": "Seizure Onset Zone of the participant"
-    },
-    "SOZ_laterality": {
-        "Description": "Seizure Onset Zone hemisphere. R for right, L for left"
-    },
-    "SOZ_region": {
-        "Description": "Seizure Onset Zone lobe (eg. temporal, frontal) or region (eg. insula)"
-    },
-    "TimeFromSleepOnset": {
-        "Description": "Time from sleep onset in minutes"
-    },
-    "SleepScoring": {
-        "Description": "Sleep stages according to AASM criteria in 30s epochs"
-    },
-    "SOZ": {
-        "Description": "Seizure onset zone (free text, as provided by the authors; README: 'SOZ: Seizure onset zone')."
+  "participant_id": {
+    "Description": "Unique participant identifier"
+  },
+  "age": {
+    "Description": "Age of the participant at time of testing",
+    "Units": "years"
+  },
+  "sex": {
+    "Description": "Biological sex of the participant",
+    "Levels": {
+      "F": "female",
+      "M": "male"
     }
+  },
+  "descriptive_SOZ": {
+    "Description": "Seizure Onset Zone of the participant"
+  },
+  "SOZ_laterality": {
+    "Description": "Seizure Onset Zone hemisphere. R for right, L for left"
+  },
+  "SOZ_region": {
+    "Description": "Seizure Onset Zone lobe (eg. temporal, frontal) or region (eg. insula)"
+  },
+  "TimeFromSleepOnset": {
+    "Description": "Time from sleep onset in minutes"
+  },
+  "SleepScoring": {
+    "Description": "Sleep stages according to AASM criteria in 30s epochs"
+  },
+  "SOZ": {
+    "Description": "Seizure onset zone (free text, as provided by the authors; README: 'SOZ: Seizure onset zone')."
+  },
+  "recorded_regions": {
+    "Description": "Brain regions with depth electrodes for this patient (row labels with \"V\" in the patient's column), verbatim, Falach et al. 2024 Sci Data 11:1354 doi:10.1038/s41597-024-04187-y Table 1 \"Recorded regions\" (https://www.nature.com/articles/s41597-024-04187-y/tables/1). Patient columns 1-25 = sub-01..sub-25 (checked against the channel labels for entorhinal cortex, parahippocampal gyrus and occipital lobe in all 25 subjects, 0 disagreements)."
+  }
 }
