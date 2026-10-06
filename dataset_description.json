@@ -1,0 +1,50 @@
+{
+    "Name": "Annotated interictal epileptiform discharges in intracranial EEG (iEEG) sleep data (Falach et al., 2024)",
+    "BIDSVersion": "1.10.0",
+    "DatasetType": "raw",
+    "License": "CC-BY-NC-4.0",
+    "Authors": [
+        "Rotem Falach",
+        "Maya Geva-Sagiv",
+        "Dawn Eliashiv",
+        "Lilach Goldstein",
+        "Ofer Budin",
+        "Guy Gurevitch",
+        "Genela Morris",
+        "Ido Strauss",
+        "Amir Globerson",
+        "Firas Fahoum",
+        "Itzhak Fried",
+        "Yuval Nir"
+    ],
+    "HowToAcknowledge": "Please cite: Falach R, Geva-Sagiv M, Eliashiv D, Goldstein L, Budin O, Gurevitch G, Morris G, Strauss I, Globerson A, Fahoum F, Fried I, Nir Y. Annotated interictal discharges in intracranial EEG sleep data and related machine learning detection scheme. Sci Data. 2024;11:1354. doi:10.1038/s41597-024-04187-y; and the dataset doi:10.6084/m9.figshare.26131978.v3.",
+    "Funding": [
+        "National Science Foundation and US-Israel Binational Science Foundation (1756473, 2017628) to I.F. and Y.N.",
+        "National Institute of Neurological Disorders and Stroke (U01 NS108930, U01 NS123128, R01 NS084017) to I.F.",
+        "European Research Council (ERC-2019-CoG 864353; ERC Proof of Concept 101158226) and Corundum Neuroscience grant to Y.N.",
+        "Human Frontier Science Program Organization postdoctoral fellowship (LT000440) to M.G.-S.",
+        "The Khazanov scholarship program to R.F."
+    ],
+    "EthicsApprovals": [
+        "Institutional Review Board, Tel Aviv Sourasky Medical Center (TLVMC IRB protocol TLV-008-12)",
+        "Medical Institutional Review Board, University of California, Los Angeles (UCLA Hospital IRB protocol 10-000973)"
+    ],
+    "ReferencesAndLinks": [
+        "https://doi.org/10.1038/s41597-024-04187-y",
+        "https://doi.org/10.6084/m9.figshare.26131978.v3",
+        "https://github.com/NirLab-TAU/iEEG_ied_detection"
+    ],
+    "SourceDatasets": [
+        {
+            "DOI": "doi:10.6084/m9.figshare.26131978.v3",
+            "URL": "https://figshare.com/articles/dataset/_/26131978/3",
+            "Version": "3"
+        }
+    ],
+    "GeneratedBy": [
+        {
+            "Name": "laneI_build003.py (iEEG-to-NEMAR redistribution campaign)",
+            "Description": "Authors' BIDS archive extracted unchanged, then minimal validator fixes listed in CHANGES (v1.0.1). EDF files byte-identical to the archive."
+        }
+    ]
+}

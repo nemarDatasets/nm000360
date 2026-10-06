@@ -1,0 +1,5 @@
+{
+    "trial_type": {
+        "Description": "Expert annotation on the timing and location of the event, as determined through clinical assessment. Values are free-text annotations written by the neurologist. Abbreviations used in this file (originally listed under 'Levels'): hippo = hippocampus; ant = anterior."
+    }
+}

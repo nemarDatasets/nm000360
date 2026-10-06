@@ -1,0 +1,5 @@
+{
+    "iEEGCoordinateSystem": "Other",
+    "iEEGCoordinateUnits": "n/a",
+    "iEEGCoordinateSystemDescription": "No electrode coordinates for this participant are included in the source archive (Figshare 10.6084/m9.figshare.26131978.v3). x, y and z are therefore n/a. Falach et al. (2024) state that precise coordinates were unavailable for 7 patients (their figure used group-average coordinates per channel; those averages are not part of the archive and are not reproduced here)."
+}
