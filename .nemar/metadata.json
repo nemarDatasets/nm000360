@@ -1,0 +1,129 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "Rotem Falach": {},
+    "Maya Geva-Sagiv": {},
+    "Dawn Eliashiv": {},
+    "Lilach Goldstein": {},
+    "Ofer Budin": {},
+    "Guy Gurevitch": {},
+    "Genela Morris": {},
+    "Ido Strauss": {},
+    "Amir Globerson": {},
+    "Firas Fahoum": {
+      "orcid": "0000-0003-2262-5530"
+    },
+    "Itzhak Fried": {},
+    "Yuval Nir": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.6084/m9.figshare.26131978.v3",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.1038/s41597-024-04187-y",
+      "identifier_type": "DOI",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000360",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000360",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    }
+  ],
+  "funding_references": [
+    {
+      "funder_name": "Rothschild Foundation postdoctoral fellowship; Tel Aviv University Sagol School of Neuroscience Postdoctoral Fellowship; The Israel National Postdoctoral Program for Advancing Women in Science; Tel Aviv University GRTF and The Naomi Foundation travel grants (to M.G.-S.)"
+    },
+    {
+      "funder_name": "The Khazanov scholarship program to R.F."
+    },
+    {
+      "funder_name": "National Science Foundation",
+      "award_number": "1756473"
+    },
+    {
+      "funder_name": "US-Israel Binational Science Foundation",
+      "award_number": "2017628"
+    },
+    {
+      "funder_name": "National Institute of Neurological Disorders and Stroke",
+      "award_number": "U01 NS108930"
+    },
+    {
+      "funder_name": "National Institute of Neurological Disorders and Stroke",
+      "award_number": "U01 NS123128"
+    },
+    {
+      "funder_name": "National Institute of Neurological Disorders and Stroke",
+      "award_number": "R01-NS084017"
+    },
+    {
+      "funder_name": "European Research Council",
+      "award_number": "ERC-2019-CoG 864353"
+    },
+    {
+      "funder_name": "European Research Council",
+      "award_number": "101158226",
+      "award_title": "ERC Proof of Concept grant"
+    },
+    {
+      "funder_name": "Human Frontier Science Program Organization",
+      "award_number": "LT000440"
+    }
+  ],
+  "title": "Annotated interictal epileptiform discharges in intracranial EEG (iEEG) sleep data (Falach et al., 2024)",
+  "license": "CC-BY-NC-4.0",
+  "dataset_type": "raw",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "ieeg"
+  ],
+  "resource_type_specific": "iEEG Dataset",
+  "sizes": [
+    "603 MB (27 files)"
+  ],
+  "formats": [
+    ".edf",
+    ".json",
+    ".md",
+    ".tsv",
+    ".yml",
+    ".zip"
+  ],
+  "description": "Multichannel intracranial EEG (iEEG) recordings from 25 epilepsy patients during sleep, collected at Tel Aviv Sourasky Medical Center and UCLA. The dataset includes 852 interictal epileptiform discharges, mostly from the medial temporal lobe, annotated by expert neurologists. It is intended to support the development and benchmarking of automated IED detection methods. Data are organized in BIDS format with electrode localization where available.",
+  "methods_description": "Intracranial depth electrode recordings were acquired with a Blackrock system during overnight sleep and shared as short excerpts (61-291 s) in EDF format at 1000 Hz. Expert neurologists annotated interictal epileptiform discharges, and sleep stages were scored according to AASM criteria. Electrode coordinates are given in MNI152Lin space for 18 participants.",
+  "keywords": [
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "interictal epileptiform discharges"
+    },
+    {
+      "term": "Epilepsy",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004827"
+    },
+    {
+      "term": "Sleep",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D012890"
+    },
+    {
+      "term": "depth electrodes"
+    },
+    {
+      "term": "machine learning"
+    }
+  ],
+  "source_hash": "ef3a423aa54ddab7079b970be6bc3b2ebf603a29ff57aacf300e46ca87473f6b"
+}
