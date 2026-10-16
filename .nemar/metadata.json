@@ -1,6 +1,11 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
+  "title": "Falach-2024-annotated-10.1038/s41597-024-04187-y",
+  "description": "Multichannel intracranial EEG (iEEG) recordings from 25 epilepsy patients during sleep, collected at two medical centers (Tel Aviv Sourasky Medical Center and UCLA). The dataset includes 852 interictal epileptiform discharges annotated by expert neurologists, mainly from the medial temporal lobe. It supports development and evaluation of machine learning detection of interictal discharges and is organized in BIDS format.",
+  "methods_description": "iEEG was recorded with depth electrodes using a Blackrock system referenced to a central scalp electrode, originally sampled at 2 kHz and shared as EDF files at 1000 Hz. Each file is a short sleep excerpt of 61 to 291 s. Expert neurologists annotated interictal epileptiform discharges, sleep was scored per AASM criteria, and electrode MNI coordinates are provided for 18 participants.",
+  "license": "CC-BY-NC-4.0",
+  "dataset_type": "raw",
   "authors": {
     "Rotem Falach": {},
     "Maya Geva-Sagiv": {},
@@ -17,6 +22,30 @@
     "Itzhak Fried": {},
     "Yuval Nir": {}
   },
+  "keywords": [
+    {
+      "term": "intracranial EEG"
+    },
+    {
+      "term": "interictal epileptiform discharges"
+    },
+    {
+      "term": "Epilepsy",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004827"
+    },
+    {
+      "term": "Sleep",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D012890"
+    },
+    {
+      "term": "depth electrodes"
+    },
+    {
+      "term": "machine learning"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.6084/m9.figshare.26131978.v3",
@@ -72,22 +101,18 @@
     },
     {
       "funder_name": "European Research Council",
-      "award_number": "101158226",
-      "award_title": "ERC Proof of Concept grant"
+      "award_number": "101158226"
     },
     {
       "funder_name": "Human Frontier Science Program Organization",
       "award_number": "LT000440"
     }
   ],
-  "title": "Annotated interictal epileptiform discharges in intracranial EEG (iEEG) sleep data (Falach et al., 2024)",
-  "license": "CC-BY-NC-4.0",
-  "dataset_type": "raw",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "iEEG Dataset",
   "modalities": [
     "ieeg"
   ],
-  "resource_type_specific": "iEEG Dataset",
   "sizes": [
     "603 MB (27 files)"
   ],
@@ -99,31 +124,5 @@
     ".yml",
     ".zip"
   ],
-  "description": "Multichannel intracranial EEG (iEEG) recordings from 25 epilepsy patients during sleep, collected at Tel Aviv Sourasky Medical Center and UCLA. The dataset includes 852 interictal epileptiform discharges, mostly from the medial temporal lobe, annotated by expert neurologists. It is intended to support the development and benchmarking of automated IED detection methods. Data are organized in BIDS format with electrode localization where available.",
-  "methods_description": "Intracranial depth electrode recordings were acquired with a Blackrock system during overnight sleep and shared as short excerpts (61-291 s) in EDF format at 1000 Hz. Expert neurologists annotated interictal epileptiform discharges, and sleep stages were scored according to AASM criteria. Electrode coordinates are given in MNI152Lin space for 18 participants.",
-  "keywords": [
-    {
-      "term": "intracranial EEG"
-    },
-    {
-      "term": "interictal epileptiform discharges"
-    },
-    {
-      "term": "Epilepsy",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004827"
-    },
-    {
-      "term": "Sleep",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D012890"
-    },
-    {
-      "term": "depth electrodes"
-    },
-    {
-      "term": "machine learning"
-    }
-  ],
-  "source_hash": "ef3a423aa54ddab7079b970be6bc3b2ebf603a29ff57aacf300e46ca87473f6b"
+  "source_hash": "ac5a2f1734f41edb8ebfc71a3b222947b783ffae8635c5e4b8f6bc82763daaf5"
 }
