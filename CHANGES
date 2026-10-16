@@ -1,3 +1,6 @@
+1.0.2 2026-10-16
+  - Restore the descriptive dataset Name recorded in the v1.0.0 history. Update generated metadata title and source hash.
+
 1.0.1 2026-10-06
   - NEMAR redistribution of the authors' BIDS archive (Figshare 10.6084/m9.figshare.26131978.v3, ieeg_ieds_bids_final.zip, MD5 cdf392d5f92ba106b1f6794844147109). The archive is kept unchanged in sourcedata/. The 25 EDF files are byte-identical to the archive. The changes below are the only differences from the archive.
   - Fix A (validator error TSV_VALUE_INCORRECT_TYPE, 22 files): in sub-XX_task-sleep_events.json, trial_type had a "Levels" object that lists abbreviations (e.g. "Rt": "Right temporal"). The trial_type values themselves are free-text neurologist labels (e.g. "Rt sharp", "LEC LPHG mesial"), so the validator rejected every value that was not a key. The abbreviation list was moved, verbatim, into the trial_type "Description" text, and "Levels" was removed. No events.tsv value was changed. Files: sub-01..sub-18, sub-20, sub-21, sub-22, sub-25 (sub-19, sub-23 and sub-24 have no "Levels" and were not touched).

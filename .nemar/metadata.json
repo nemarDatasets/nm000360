@@ -1,7 +1,7 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
-  "title": "Falach-2024-annotated-10.1038/s41597-024-04187-y",
+  "title": "Annotated interictal epileptiform discharges in intracranial EEG (iEEG) sleep data (Falach et al., 2024)",
   "description": "Multichannel intracranial EEG (iEEG) recordings from 25 epilepsy patients during sleep, collected at two medical centers (Tel Aviv Sourasky Medical Center and UCLA). The dataset includes 852 interictal epileptiform discharges annotated by expert neurologists, mainly from the medial temporal lobe. It supports development and evaluation of machine learning detection of interictal discharges and is organized in BIDS format.",
   "methods_description": "iEEG was recorded with depth electrodes using a Blackrock system referenced to a central scalp electrode, originally sampled at 2 kHz and shared as EDF files at 1000 Hz. Each file is a short sleep excerpt of 61 to 291 s. Expert neurologists annotated interictal epileptiform discharges, sleep was scored per AASM criteria, and electrode MNI coordinates are provided for 18 participants.",
   "license": "CC-BY-NC-4.0",
@@ -124,5 +124,5 @@
     ".yml",
     ".zip"
   ],
-  "source_hash": "ac5a2f1734f41edb8ebfc71a3b222947b783ffae8635c5e4b8f6bc82763daaf5"
+  "source_hash": "aecda35b378b73d90314e25036a7c80019bbbe85a7e41ce5ef4df3499ce8e5cc"
 }
