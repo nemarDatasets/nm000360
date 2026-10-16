@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Annotated interictal epileptiform discharges in intracranial EEG (iEEG) sleep data (Falach et al., 2024)",
-  "description": "Multichannel intracranial EEG (iEEG) recordings from 25 epilepsy patients during sleep, collected at two medical centers (Tel Aviv Sourasky Medical Center and UCLA). The dataset includes 852 interictal epileptiform discharges annotated by expert neurologists, mainly from the medial temporal lobe. It supports development and evaluation of machine learning detection of interictal discharges and is organized in BIDS format.",
-  "methods_description": "iEEG was recorded with depth electrodes using a Blackrock system referenced to a central scalp electrode, originally sampled at 2 kHz and shared as EDF files at 1000 Hz. Each file is a short sleep excerpt of 61 to 291 s. Expert neurologists annotated interictal epileptiform discharges, sleep was scored per AASM criteria, and electrode MNI coordinates are provided for 18 participants.",
+  "description": "This dataset contains multichannel intracranial EEG (iEEG) recordings from 25 epilepsy patients during overnight sleep, collected at two medical centers (Tel Aviv Sourasky Medical Center and UCLA). It includes 852 interictal epileptiform discharges annotated by expert neurologists, primarily in the medial temporal lobe. Short sleep excerpts are provided in BIDS format with electrode information, seizure onset zone, and sleep scoring, supporting development and benchmarking of automated IED detection methods.",
+  "methods_description": "Depth-electrode iEEG was recorded with a Blackrock system during sleep in epilepsy patients undergoing clinical monitoring. Expert neurologists annotated interictal epileptiform discharges. Data were resampled to 1000 Hz and shared as EDF files (61 to 291 s excerpts), with sleep stages scored per AASM criteria and electrode coordinates in MNI space for a subset of participants.",
   "license": "CC-BY-NC-4.0",
   "dataset_type": "raw",
   "authors": {
@@ -101,10 +101,11 @@
     },
     {
       "funder_name": "European Research Council",
-      "award_number": "101158226"
+      "award_number": "101158226",
+      "award_title": "ERC Proof of Concept grant"
     },
     {
-      "funder_name": "Human Frontier Science Program Organization",
+      "funder_name": "Human Frontier Science Program",
       "award_number": "LT000440"
     }
   ],
