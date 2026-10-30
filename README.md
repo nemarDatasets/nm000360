@@ -87,6 +87,14 @@ Hospital IRB protocol: 10-000973, TLVMC IRB protocol: TLV-008-12."
   the neurologist's free-text label, `sample` = onset sample). The 25 files hold 853 rows in total; the paper
   reports 852 IEDs. The rows are kept as provided. `derivatives/` holds the authors' per-event channel
   lists (`*_events_interpretation.tsv`) and the channel-abbreviation table (`channels.tsv`).
+- `events.tsv` and `derivatives/*_events_interpretation.tsv` are both byte-identical to the files in the authors'
+  archive (`sourcedata/ieeg_ieds_bids_final.zip`, checked Oct 2026), and they do not always agree. Matched row by row:
+  sub-09 has 27 events but 26 interpretation rows (the event at 179.688 s has none); 6 rows differ in time by more
+  than 1 ms (sub-01 row 45: 147.958 vs 148.0 s; sub-14 row 28: 178.297 vs 178.23 s; sub-16 rows 16, 26 and 28:
+  39.591 vs 39.291, 64.954 vs 64.754 and 79.774 vs 79.724 s; sub-22 row 2: 188.025 vs 187.985 s). All other rows
+  agree within 0.5 ms (events.tsv onsets are rounded to 1 ms, interpretation times are not). Labels differ only in
+  a trailing full stop or truncation (sub-16, -17, -18, -20 to -24). Neither file is corrected here; which time is
+  right is not documented.
 - Electrode coordinates (MNI152Lin, mm) are provided by the authors for 18 participants. For the other 7
   (sub-08, sub-10 to sub-15), the archive has no coordinates. `electrodes.tsv` for these lists the referential
   contact names with x/y/z = n/a, and `coordsystem.json` says "Other" with units "n/a". No coordinates were
